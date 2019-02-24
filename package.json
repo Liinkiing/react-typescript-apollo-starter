@@ -1,0 +1,54 @@
+{
+  "name": "react-typescript-apollo-starter",
+  "description": "A simple starter to work with GraphQL, React, Typescript and GraphQL code-gen for TS",
+  "author": "Omar Jbara <omar.jbara2@gmail.com>",
+  "version": "0.1.0",
+  "repository": {
+    "url": "https://github.com/Liinkiing/react-typescript-apollo-starter",
+    "type": "git"
+  },
+  "bugs": {
+    "url": "https://github.com/Liinkiing/react-typescript-apollo-starter/issues"
+  },
+  "private": true,
+  "dependencies": {
+    "@types/jest": "24.0.6",
+    "@types/node": "11.9.5",
+    "@types/react": "16.8.4",
+    "@types/react-dom": "16.8.2",
+    "apollo-boost": "^0.1.28",
+    "apollo-cache-inmemory": "^1.4.3",
+    "graphql": "^14.1.1",
+    "react": "^16.8.3",
+    "react-apollo": "^2.4.1",
+    "react-apollo-hooks": "^0.4.1",
+    "react-dom": "^16.8.3",
+    "react-scripts": "2.1.5",
+    "styled-components": "^4.1.3",
+    "ts-optchain": "^0.1.3",
+    "typescript": "3.3.3333"
+  },
+  "scripts": {
+    "gql-gen": "gql-gen",
+    "prestart": "yarn gql-gen",
+    "start": "react-scripts start",
+    "dev": "concurrently  \"react-scripts start\" \"yarn gql-gen --watch\" ",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not ie <= 11",
+    "not op_mini all"
+  ],
+  "devDependencies": {
+    "@types/styled-components": "^4.1.10",
+    "graphql-code-generator": "^0.17.0",
+    "graphql-codegen-typescript-react-apollo-template": "^0.17.0"
+  }
+}
