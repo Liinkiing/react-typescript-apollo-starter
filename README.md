@@ -102,3 +102,5 @@ const App: FunctionComponent = () => {
 
 export default App
 ```
+
+and you get all the nice **autocompletion** from your IDE thanks to Typescript! And if you change your *.graphql file to add a new field for a GraphQL query, it will be automatically generated and you will be always in sync with your GraphQL files!
