@@ -8,7 +8,7 @@ const AppInner = styled.div`
 const App: FunctionComponent = () => {
   return (
     <AppInner>
-      <header className="App-header">
+      <header>
         <h1>Header</h1>
       </header>
       <main>
