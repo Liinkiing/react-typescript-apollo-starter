@@ -1,0 +1,15 @@
+{
+  "name": "API",
+  "schemaPath": "schema.graphql",
+  "extensions": {
+    "endpoints": {
+      "API Endpoint": {
+        "url": "https://localhost:8000/",
+        "headers": {
+          "user-agent": "JS GraphQL"
+        },
+        "introspect": true
+      }
+    }
+  }
+}

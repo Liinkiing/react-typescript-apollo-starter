@@ -1,16 +1,22 @@
 schema:
-  - "http://localhost:8000/graphql/"
+  - "https://localhost:8000/"
 documents:
   - "./src/**/*.graphql"
 overwrite: true
 config: {}
 generates:
+  ./src/fragmentTypes.json:
+    plugins:
+      - fragment-matcher
   ./src/graphql/components.tsx:
     config:
+      immutableTypes: true
       withHooks: true
+      avoidOptionals: true
       noNamespaces: true
     plugins:
-      - "typescript-common"
-      - "typescript-client"
+      - add: '/* eslint-disable */'
+      - "typescript"
+      - "typescript-operations"
       - "typescript-react-apollo"
 require: []

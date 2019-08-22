@@ -12,24 +12,28 @@
   },
   "private": true,
   "dependencies": {
-    "@types/jest": "24.0.6",
-    "@types/node": "11.9.5",
-    "@types/react": "16.8.4",
-    "@types/react-dom": "16.8.2",
-    "apollo-boost": "^0.1.28",
-    "apollo-cache-inmemory": "^1.4.3",
-    "graphql": "^14.1.1",
-    "react": "^16.8.3",
-    "react-apollo": "^2.4.1",
-    "react-apollo-hooks": "^0.4.1",
-    "react-dom": "^16.8.3",
-    "react-scripts": "2.1.5",
-    "styled-components": "^4.1.3",
-    "ts-optchain": "^0.1.3",
-    "typescript": "3.3.3333"
+    "@apollo/react-hooks": "^3.0.1",
+    "@types/graphql": "^14.2.3",
+    "@types/jest": "24.0.18",
+    "@types/node": "12.7.2",
+    "@types/react": "16.9.2",
+    "@types/react-dom": "16.9.0",
+    "apollo-boost": "^0.4.4",
+    "apollo-cache-inmemory": "^1.6.3",
+    "cross-env": "^5.2.0",
+    "graphql": "^14.5.0",
+    "polished": "^3.4.1",
+    "react": "^16.9.0",
+    "react-apollo": "^3.0.1",
+    "react-dom": "npm:@hot-loader/react-dom",
+    "react-hot-loader": "^4.12.11",
+    "react-scripts": "3.1.1",
+    "styled-components": "^4.3.2",
+    "ts-optchain": "^0.1.8",
+    "typescript": "3.5.3"
   },
   "scripts": {
-    "gql-gen": "gql-gen",
+    "gql-gen": "cross-env NODE_TLS_REJECT_UNAUTHORIZED=0 gql-gen",
     "prestart": "yarn gql-gen",
     "start": "react-scripts start",
     "dev": "concurrently  \"react-scripts start\" \"yarn gql-gen --watch\" ",
@@ -46,9 +50,19 @@
     "not ie <= 11",
     "not op_mini all"
   ],
+  "babelMacros": {
+    "styledComponents": {
+      "pure": true
+    }
+  },
   "devDependencies": {
-    "@types/styled-components": "^4.1.10",
-    "graphql-code-generator": "^0.17.0",
-    "graphql-codegen-typescript-react-apollo-template": "^0.17.0"
+    "@graphql-codegen/add": "^1.6.1",
+    "@graphql-codegen/cli": "^1.6.1",
+    "@graphql-codegen/fragment-matcher": "^1.6.1",
+    "@graphql-codegen/typescript": "^1.6.1",
+    "@graphql-codegen/typescript-operations": "^1.6.1",
+    "@graphql-codegen/typescript-react-apollo": "^1.6.1",
+    "@types/styled-components": "^4.1.18",
+    "babel-plugin-styled-components": "^1.10.6"
   }
 }

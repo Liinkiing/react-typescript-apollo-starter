@@ -1,11 +1,12 @@
-import React, { FunctionComponent } from "react"
-import styled from "styled-components"
+import { hot } from "react-hot-loader/root"
+import React, { FC } from "react"
+import styled from "styled-components/macro"
 
 const AppInner = styled.div`
   
 `
 
-const App: FunctionComponent = () => {
+const App: FC = () => {
   return (
     <AppInner>
       <header>
@@ -18,4 +19,6 @@ const App: FunctionComponent = () => {
   );
 }
 
-export default App
+export default hot(
+  App
+)
